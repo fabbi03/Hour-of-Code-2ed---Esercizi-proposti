@@ -1,2 +1,15 @@
 # Hour of Code 2ed - Esercizi proposti
- Esercizi proposti agli studenti e corredati di soluzione, per la seconda edizione del corso "Hour of Code"
+
+Esercizi raccolti e proposti per la classe 2021/22 del corso di introduzione alla programmazione "Hour of Code", seconda edizione.
+
+---
+
+## Consegne
+
+L'obiettivo di ogni esercizio, presentato in un singolo file numerato con estensione .py, è quello di riempire la definizione di una data funzione per risolvere un dato problema.
+
+Il problema da affrontare (consegna) è definito per ogni file in una stringa multiriga all'inizio.
+
+Sono presenti alla fine di ogni file un paio di istruzioni `assert`: non vanno toccate, e al limite se ne possono aggiungere di altre, allo scopo di verificare che la soluzione trovata funzioni come inteso.
+
+**Esempio**: in un esercizio in cui si richiede di scoprire se un numero sia primo o meno, si possono trovare degli `assert` in corrispondenza di numeri primi effettivi, e degli `assert not` in corrispondenza di 0 e 1 e valori pari.
