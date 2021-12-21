@@ -42,7 +42,7 @@ def calcolatrice_safe(expr):
     return None
 
 
-# Decidiamo qua quale delle tre definizioni usare
+# Decidiamo qua quale delle due definizioni usare
 calcolatrice = calcolatrice_safe
 
 assert calcolatrice("2+2")==4
