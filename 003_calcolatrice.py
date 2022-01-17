@@ -6,8 +6,42 @@ Aspettarsi che l'input della funzione da definire sia una stringa.
 Dopo gli assert, si pone un loop di input utente per testare la funzione. Si inserisca un'espressione non valida per terminare il loop.
 """
 
-def calcolatrice(expr):
-    pass
+import re
+
+pattern_float = "([+-])?\s*(([0-9]*[.])?[0-9]+)"
+pattern = "\s*"+pattern_float+"\s*([+\-/\*xX])\s*"+pattern_float+"\s*"
+
+# funzione "eval"
+
+#versione sbagliata della funzione
+def calcolatrice_wrong(expr):
+    if re.match(pattern, expr)!=None:
+        res = eval(expr)
+        return res
+    return None
+
+#versione giusta della fnzione
+def calcolatrice_right(expr):
+    match = re.search(pattern, expr)
+    if match!=None and re.match(pattern, expr)!=None:
+
+        sign1, num1, _, op, sign2, num2, _ = match.groups()
+
+        num1 = float(num1)
+        if sign1 == "-": num1 *= -1 
+
+        num2 = float(num2)
+        if sign2 == "-": num2 *= -1 
+
+        if op=="x" or op=="X": op="*"           
+        if num2 == 0.0 and op=="/": return None 
+
+        res = eval(str(num1)+op+str(num2)) 
+        return res
+    return None
+
+
+calcolatrice = calcolatrice_right
 
 assert calcolatrice("2+2")==4
 assert calcolatrice("  30   *   2")==60

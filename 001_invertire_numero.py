@@ -6,7 +6,7 @@ Aspettarsi che l'input della funzione da definire sia già un numero intero n.
 def inverti_numero(n):
     if not str(n).isdigit:
         return None
-    return int( str(n)[::-1] )
+    return int( str(n)[::-1] );
 
 
 assert inverti_numero(0) == 0
